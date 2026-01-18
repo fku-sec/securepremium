@@ -1,0 +1,11 @@
+device_id,login_failures,total_logins,tpm_status,cpu_usage
+CORP-LAP-001,2,100,healthy,25.5
+CORP-LAP-002,0,50,healthy,10.2
+CORP-LAP-003,5,100,degraded,75.3
+CORP-LAP-004,1,200,healthy,45.1
+CORP-LAP-005,3,80,healthy,32.7
+CORP-DESK-001,0,150,healthy,5.2
+CORP-DESK-002,1,120,healthy,15.8
+CORP-DESK-003,7,100,failed,95.2
+CORP-DESK-004,2,90,healthy,22.1
+CORP-DESK-005,0,200,healthy,8.5

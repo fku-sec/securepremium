@@ -11,8 +11,13 @@ setup(
     description="SecurePremium - Quantify device compromise risk as insurance premiums",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/example/securepremium",
+    url="https://github.com/fku-sec/securepremium",
     packages=find_packages(),
+    entry_points={
+        "console_scripts": [
+            "securepremium=securepremium.cli.main:cli",
+        ],
+    },
     classifiers=[
         "Programming Language :: Python :: 3",
         "Programming Language :: Python :: 3.9",
@@ -35,6 +40,8 @@ setup(
         "requests>=2.28.0",
         "cryptography>=41.0.0",
         "pyyaml>=6.0",
+        "click>=8.0.0",
+        "tabulate>=0.9.0",
     ],
     extras_require={
         "dev": [

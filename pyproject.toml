@@ -47,7 +47,7 @@ dev = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/example/securepremium"
-Repository = "https://github.com/example/securepremium"
-Issues = "https://github.com/example/securepremium/issues"
-Documentation = "https://github.com/example/securepremium/blob/main/README.md"
+Homepage = "https://github.com/fku-sec/securepremium"
+Repository = "https://github.com/fku-sec/securepremium"
+Issues = "https://github.com/fku-sec/securepremium/issues"
+Documentation = "https://github.com/fku-sec/securepremium/blob/main/README.md"
