@@ -88,11 +88,7 @@ class TestDeviceEndpoints:
     def test_get_nonexistent_device(self):
         """Test getting nonexistent device returns 404."""
         response = client.get(f"/api/devices/NONEXISTENT-{uuid.uuid4().hex[:8]}")
-        assert response.status_code == 200
-        data = response.json()
-        assert "total" in data
-        assert "devices" in data
-        assert isinstance(data["devices"], list)
+        assert response.status_code == 404
 
 
 class TestRiskAssessmentEndpoints:
@@ -283,7 +279,10 @@ class TestParticipantEndpoints:
             "participant_id": participant_id,
             "participant_name": f"Get Test Org {uuid.uuid4().hex[:4]}",
         }
-        client.post("/api/participants", json=payload)
+        reg_response = client.post("/api/participants", json=payload)
+        if reg_response.status_code != 201:
+            print(f"Registration failed: {reg_response.text}")
+        assert reg_response.status_code == 201
         
         # Get participant
         response = client.get(f"/api/participants/{participant_id}")

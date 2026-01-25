@@ -182,7 +182,7 @@ class ParticipantRegisterRequest(BaseModel):
     """Request model for participant registration."""
     participant_id: str
     participant_name: str
-    api_key: Optional[str]
+    api_key: Optional[str] = None
 
 
 class ParticipantResponse(BaseModel):
